@@ -1,6 +1,7 @@
 var assert = require('assert');
-var name = 'Juanitozxcvr';
-var lastName = 'Alimanvcxzvcf';
+//var rand = Math.floor(Math.random() * 200);
+var name = 'Juanitozxcvr';// + rand;
+var lastName = 'Alimanvcxzvcf';// + rand;
 var mail = 'zxcv@hotmail.com';
 var passwordIn = 'Qwerty1234';
 describe('los estudiantes login', function() {
@@ -34,42 +35,42 @@ describe('los estudiantes login', function() {
     });
 });
 
-// describe('los estudiantes Create ', function() {
-//     it('should create an account in los estudiantes', function () {
+describe('los estudiantes Create ', function() {
+    it('should create an account in los estudiantes', function () {
 
-//         browser.waitForVisible('input[name="nombre"]', 5000);
-//         var regName = browser.element('input[name="nombre"]');
-//         regName.click();
-//         regName.setValue(name);
+        browser.waitForVisible('input[name="nombre"]', 5000);
+        var regName = browser.element('input[name="nombre"]');
+        regName.click();
+        regName.setValue(name);
 
-//         browser.waitForVisible('input[name="apellido"]', 5000);
-//         var regLastName = browser.element('input[name="apellido"]');
-//         regLastName.click();
-//         regLastName.setValue(lastName);
+        browser.waitForVisible('input[name="apellido"]', 5000);
+        var regLastName = browser.element('input[name="apellido"]');
+        regLastName.click();
+        regLastName.setValue(lastName);
         
-//         browser.waitForVisible('input[name="correo"]', 5000);
-//         var mailInput = browser.element('input[name="correo"]');
-//         mailInput.click();
-//         mailInput.setValue(mail);
+        browser.waitForVisible('input[name="correo"]', 5000);
+        var mailInput = browser.element('input[name="correo"]');
+        mailInput.click();
+        mailInput.setValue(mail);
        
-//         browser.waitForVisible('select[name="idDepartamento"]', 15000);
-//         var selectDepartment = browser.element('select[name="idDepartamento"]');
-//         selectDepartment.selectByValue('3');
+        browser.waitForVisible('select[name="idDepartamento"]', 15000);
+        var selectDepartment = browser.element('select[name="idDepartamento"]');
+        selectDepartment.selectByValue('3');
 
-//         browser.waitForVisible('input[name="password"]', 5000);
-//         var passwordInput = browser.element('input[name="password"]');
-//         passwordInput.click();
-//         passwordInput.setValue(passwordIn);
+        browser.waitForVisible('input[name="password"]', 5000);
+        var passwordInput = browser.element('input[name="password"]');
+        passwordInput.click();
+        passwordInput.setValue(passwordIn);
 
-//         browser.waitForVisible('button=Registrarse', 5000);
-//         browser.element('button=Registrarse').click();
+        browser.waitForVisible('button=Registrarse', 5000);
+        browser.element('button=Registrarse').click();
 
-//         browser.waitForVisible('.sweet-alert', 50000);
-//         console.log('hasta aca funciona bn');
-//         var alertText = browser.element('.sweet-alert').getText('h2');
-//         expect(alertText).toBe('Registro exitoso!');
-//     });
-// });
+        browser.waitForVisible('.sweet-alert', 50000);
+        console.log('hasta aca funciona bn');
+        var alertText = browser.element('.sweet-alert').getText('h2');
+        expect(alertText).toBe('Registro exitoso!');
+    });
+});
 
 
 describe('los estudiantes login', function() {
@@ -116,12 +117,11 @@ describe('los estudiantes login', function() {
 
 describe('Find Profesor', function(){
     it('Should redirect to profesor page',function(){
-
+        browser.waitForVisible('.profesor', 5000);
+        browser.element('.profesor').click();
+        browser.waitForVisible('.boton.btn.btn-primary', 5000);
+        expect(browser.isExisting('.boton.btn.btn-primary'));
     });
-    browser.waitForVisible('.profesor', 5000);
-    browser.element('.profesor').click();
-    expect(browser.getUrl().toBe('https://losestudiantes.co/universidad-de-los-andes/ingenieria-de-sistemas/profesores/german-romero-gutierrez'));
-    //https://losestudiantes.co/universidad-de-los-andes/ingenieria-de-sistemas/profesores/german-romero-gutierrez
 });
 
 describe('los estudiantes Create ', function() {
