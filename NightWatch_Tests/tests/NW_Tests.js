@@ -1,58 +1,28 @@
+var testName = 'Camilo';
+var testLastName = 'Forero';
+var testMail = 'camilo1234@wrongmail.com';
+var testPassword = '123432';
+
+
 module.exports = { // adapted from: https://git.io/vodU0
-  'Los estudiantes login falied': function(browser) {
+  'Los estudiantes redirect to Professor page':function (browser){
     browser
-      .url('https://losestudiantes.co/')
-      .click('.botonCerrar')
-      .pause(4000)
-      .click('.botonIngresar')
-      .pause(4000)
-      .setValue('.cajaLogIn input[name="correo"]', 'wrongemail123421@example.com')
-      .setValue('.cajaLogIn input[name="password"]', '123432122')
-      .click('.cajaLogIn .logInButton')
-      .pause(4000)
-      .assert.containsText('.aviso.alert.alert-danger', 'El correo y la contraseña que ingresaste no figuran');
+    .url('https://losestudiantes.co/')
+    .click('.botonCerrar')
+    .pause(2000)
+    .click('select[id="sample_select"] option[value="universidad-de-los-andes,ingenieria-de-sistemas"]')
+    .click('.false.boton.btn.btn-default')
+    .pause(1000)
+    .click('.profesor a')
+    .pause(4000)
+    .assert.urlEquals('https://losestudiantes.co/universidad-de-los-andes/ingenieria-de-sistemas/profesores/alvaro-andres-gomez-d%60alleman');
   },
-  'Los estudiantes login succesfully': function(browser) {
+  'Los estudiantes filter professor by subject' : function(browser){
     browser
-      .pause(4000)
-      .click('.botonIngresar')
-      .pause(4000)
-      .click('.cajaLogIn input[name="correo"]')
-      .clearValue('.cajaLogIn input[name="correo"]')
-      .setValue('.cajaLogIn input[name="correo"]', 'camus375@hotmail.com')
-      .clearValue('.cajaLogIn input[name="password"]')
-      .setValue('.cajaLogIn input[name="password"]', 'Qwerty123')
-      .click('.cajaLogIn .logInButton')
-      .pause(4000)
-      .assert.visible('button[id="cuenta"]');
-  }, 
-  'Los estudiantes create new user ' : function(browser){
-      
+    .click('input[name="ISIS1205"]')
+    .assert.visible('.statsProfesor');
   },
   after : function(client) {
     client.end();
   }
 };
-
-
-// module.exports = { // adapted from: https://git.io/vodU0
-//   'Los estudiantes login succesfully': function(browser) {
-//     browser
-//       .url('https://losestudiantes.co/')
-//       .click('.botonCerrar')
-//       .pause(5000)
-//       //.waitForElementVisible('.botonIngresar', 4000)
-//       .click('.botonIngresar')
-//       .pause(5000)
-//       .click('.cajaLogIn input[name="correo"]')
-//       .setValue('.cajaLogIn input[name="correo"]', 'camus375@hotmail.com')
-//       .setValue('.cajaLogIn input[name="password"]', 'Qwerty123')
-//       .click('.cajaLogIn .logInButton')
-//       //.waitForElementVisible('.usrImage .fa .fa-user-circle .fa-2x', 4000)
-//       //.assert.containsText('.aviso.alert.alert-danger', 'El correo y la contraseña que ingresaste no figuran')
-//       .pause(4000)
-//       .assert.visible('button[id="cuenta"]')
-//       .end();
-//   }
-// };
-

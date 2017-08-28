@@ -75,8 +75,6 @@ describe('los estudiantes Create ', function() {
 
 describe('los estudiantes login', function() {
     it('should visit los estudiantes and log in succesfully', function () {
-        
-
         browser.newWindow('https://losestudiantes.co', 'login');
         browser.waitForVisible('button=Ingresar', 5000);
         browser.click('button=Ingresar');

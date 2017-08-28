@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="0"
-            failures="1"
-            tests="1">
+            failures="0"
+            tests="2">
 
   <testsuite name="NW_Tests"
-    errors="0" failures="1" hostname="" id="" package="NW_Tests" skipped="0"
-    tests="1" time="12.67" timestamp="Wed, 23 Aug 2017 23:55:06 GMT">
+    errors="0" failures="0" hostname="" id="" package="NW_Tests" skipped="0"
+    tests="2" time="18.11" timestamp="Mon, 28 Aug 2017 03:11:46 GMT">
   
-    <testcase name="Los estudiantes login falied" classname="NW_Tests" time="12.67" assertions="2">
+    <testcase name="Los estudiantes redirect to Professor page" classname="NW_Tests" time="17.71" assertions="1">
 
-      <failure message="Timed out while waiting for element &lt;..cajaLogIn input[name=&quot;correo&quot;]&gt; to be present for 4000 milliseconds.">    at Object.Los estudiantes login falied (C:\Users\Camilo Forero\Documents\GitHub\Tarea-pruebas-automatizadas\NightWatch_Tests\tests\NW_Tests.js:8:8)
-    at _combinedTickCallback (internal/process/next_tick.js:73:7)</failure>
+    
+    </testcase>
+  
+    <testcase name="Los estudiantes filter professor by subject" classname="NW_Tests" time="0.4010" assertions="1">
 
     
     </testcase>

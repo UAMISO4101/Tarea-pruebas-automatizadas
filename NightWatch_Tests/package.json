@@ -1,0 +1,25 @@
+{
+  "name": "nightwatch_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "NW_Tests.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UAMISO4101/NightWatch_Tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UAMISO4101/NightWatch_Tests/issues"
+  },
+  "homepage": "https://github.com/UAMISO4101/NightWatch_Tests#readme",
+  "dependencies": {
+    "nightwatch-commands": "^3.0.0"
+  }
+}
