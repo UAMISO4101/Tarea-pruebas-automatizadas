@@ -57,6 +57,28 @@ describe('Los estudiantes failed at create new account', function() {
     })
 })
 
+describe('Los estudiantes search for a Professor', function() {
+    it('Visits los estudiantes and search for a Professor', function() {
+        cy.visit('https://losestudiantes.co')
+        cy.contains('Cerrar').click()
+        //Lineas nuevas  
+        cy.get('.Select-placeholder').get('.Select-input').get('input').click({force: true}).type('mario lin') 
+        expect(cy.contains('Mario Linares Vasquez')).to.exist
+    })
+})
 
 
-//Select-input
+describe('Los estudiantes navigate to a Professor page', function() {
+    it('Visits los estudiantes and navigate to a Professor page', function() {
+        cy.contains('Mario Linares Vasquez').click()
+        cy.url().should('eq', 'https://losestudiantes.co/universidad-de-los-andes/ingenieria-de-sistemas/profesores/mario-linares-vasquez')
+    })
+})
+
+describe('Los estudiantes filter by subjects', function() {
+    it('Visits los estudiantes and filter by subjects', function() {
+        cy.visit('https://losestudiantes.co/universidad-de-los-andes/ingenieria-de-sistemas/profesores/mario-linares-vasquez')
+        cy.get('.statsProfesorDropdownItemChecked').get(':checkbox').first().click()
+        expect(cy.get('.post').should('have.length', 4));
+    });
+});
