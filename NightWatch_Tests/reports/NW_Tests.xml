@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <testsuites errors="1"
-            failures="1"
+            failures="0"
             tests="2">
 
   <testsuite name="NW_Tests"
-    errors="1" failures="1" hostname="" id="" package="NW_Tests" skipped="1"
-    tests="2" time="31.79" timestamp="Sun, 03 Sep 2017 22:51:19 GMT">
+    errors="1" failures="0" hostname="" id="" package="NW_Tests" skipped="1"
+    tests="2" time="0.2930" timestamp="Sat, 02 Sep 2017 05:52:26 GMT">
   
-    <testcase name="Los estudiantes redirect to Professor page" classname="NW_Tests" time="31.79" assertions="1">  <failure message="Testing if the URL equals &quot;https://losestudiantes.co/universidad-de-los-andes/ingenieria-de-sistemas/profesores/alvaro-andres-gomez-d%60alleman&quot;.">    at Object.Los estudiantes redirect to Professor page (C:\Users\Camilo Forero\Documents\GitHub\Tarea-pruebas-automatizadas\nightwatch_tests\tests\NW_Tests.js:16:13)
-    at _combinedTickCallback (internal/process/next_tick.js:73:7)</failure>
-
-    
+    <testcase name="Los estudiantes redirect to Professor page" classname="NW_Tests" time="0.2930" assertions="0">
     </testcase>
   
 
   
     <system-err>
-      ERROR: Unable to locate element: &quot;.false.boton.btn.btn-default&quot; using: css selector
-    at Object.Los estudiantes redirect to Professor page (C:\Users\Camilo Forero\Documents\GitHub\Tarea-pruebas-automatizadas\nightwatch_tests\tests\NW_Tests.js:12:6)
+        Error while running [NW Tests / Los estudiantes redirect to Professor page]:
+
+  TypeError: Cannot read property 'log' of undefined
+    at Object.Los estudiantes redirect to Professor page (C:\Users\Camilo Forero\Documents\GitHub\Tarea-pruebas-automatizadas\nightwatch_tests\tests\NW_Tests.js:7:13)
     at Module.call (C:\Users\Camilo Forero\AppData\Roaming\npm\node_modules\nightwatch\lib\runner\module.js:62:34)
     at C:\Users\Camilo Forero\AppData\Roaming\npm\node_modules\nightwatch\lib\runner\testcase.js:70:29
     at _fulfilled (C:\Users\Camilo Forero\AppData\Roaming\npm\node_modules\nightwatch\node_modules\q\q.js:834:54)
